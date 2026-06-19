@@ -1,8 +1,7 @@
 *{
 
 box-sizing:border-box;
-
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 
 }
 
@@ -19,30 +18,88 @@ color:white;
 
 
 
-.hero{
+/* NAVBAR */
 
-height:100vh;
+nav{
+
+height:80px;
+
+background:#111;
 
 display:flex;
 
-justify-content:center;
-
 align-items:center;
 
-background:
-linear-gradient(
-rgba(0,0,0,.8),
-rgba(0,0,0,.9)
-),
-url("../assets/taller.jpg");
+justify-content:space-between;
 
-background-size:cover;
+padding:0 50px;
+
+border-bottom:2px solid #e30613;
+
+}
+
+
+nav h2{
+
+font-size:25px;
+
+}
+
+
+nav span{
+
+color:#e30613;
 
 }
 
 
 
-.container{
+nav button{
+
+background:#e30613;
+
+border:none;
+
+padding:12px 25px;
+
+color:white;
+
+border-radius:6px;
+
+cursor:pointer;
+
+}
+
+
+
+
+
+/* LANDING */
+
+
+.hero{
+
+height:calc(100vh - 80px);
+
+background:
+
+linear-gradient(
+rgba(0,0,0,.75),
+rgba(0,0,0,.9)
+),
+
+url("../assets/taller.jpg");
+
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
 
 text-align:center;
 
@@ -50,47 +107,43 @@ text-align:center;
 
 
 
-h1{
+.hero h1{
 
-font-size:70px;
-
-}
-
-
-
-h1 span{
-
-color:#e50914;
+font-size:55px;
 
 }
 
 
 
-button{
+.hero p{
 
-background:#e50914;
+font-size:20px;
 
-color:white;
-
-border:none;
-
-padding:15px 40px;
-
-border-radius:8px;
-
-cursor:pointer;
-
-font-size:18px;
+color:#ddd;
 
 }
 
 
 
-.login{
+/* MODAL LOGIN */
 
-height:100vh;
 
-display:flex;
+.modal{
+
+
+display:none;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.8);
 
 justify-content:center;
 
@@ -100,21 +153,35 @@ align-items:center;
 
 
 
-.card{
+.login-box{
 
-background:#1b1b1b;
 
-padding:40px;
+background:#fff;
+
+color:#333;
+
+width:350px;
+
+padding:35px;
 
 border-radius:15px;
 
-width:350px;
+text-align:center;
 
 }
 
 
 
-input{
+.login-box h2{
+
+color:#e30613;
+
+}
+
+
+
+.login-box input{
+
 
 width:100%;
 
@@ -122,35 +189,59 @@ padding:12px;
 
 margin:10px 0;
 
-background:#222;
-
-border:1px solid #444;
-
-color:white;
-
 }
 
 
 
-.card button{
+.login-box button{
+
 
 width:100%;
 
+padding:12px;
+
+background:#e30613;
+
+color:white;
+
+border:none;
+
+cursor:pointer;
+
+border-radius:5px;
+
 }
 
 
 
-header{
 
-padding:20px;
+/* ADMIN */
 
-background:#000;
 
-border-bottom:3px solid #e50914;
+.admin{
+
+background:#f2f2f2;
+
+color:#333;
+
+}
+
+
+
+.admin-header{
+
+
+background:#222;
+
+color:white;
+
+padding:20px 40px;
 
 display:flex;
 
 justify-content:space-between;
+
+border-bottom:5px solid #e30613;
 
 }
 
@@ -164,7 +255,8 @@ padding:40px;
 
 
 
-.grid{
+.cards{
+
 
 display:grid;
 
@@ -172,24 +264,41 @@ grid-template-columns:
 
 repeat(auto-fit,minmax(250px,1fr));
 
-gap:20px;
+
+gap:25px;
 
 }
 
 
 
-.box{
+.cards div{
 
-background:#1d1d1d;
 
-padding:40px;
+background:white;
 
-text-align:center;
+padding:35px;
 
-border-radius:15px;
+border-radius:10px;
 
-border-left:5px solid #e50914;
+box-shadow:0 5px 15px #ccc;
 
-font-size:22px;
+border-left:6px solid #e30613;
+
+}
+
+
+
+.cards button{
+
+
+background:#e30613;
+
+color:white;
+
+border:none;
+
+padding:10px 30px;
+
+cursor:pointer;
 
 }
